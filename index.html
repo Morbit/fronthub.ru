@@ -5,6 +5,7 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
 <head>
     <title>FRONTHUB-15</title>
     <meta charset="utf-8"/>
@@ -12,6 +13,7 @@
     <!--[if lte IE 8]>
         <script src="assets/js/ie/html5shiv.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="assets/css/ie8.css"/>
@@ -20,6 +22,7 @@
         <link rel="stylesheet" href="assets/css/ie9.css"/>
     <![endif]-->
 </head>
+
 <body class="landing">
 
 <!-- Page Wrapper -->
@@ -53,7 +56,7 @@
                 митапы и выездные холивары!<br/>
                 как было <a href="http://2014.front-end.su" target="_blank">в прошлом году</a>.</p>
             <ul class="actions">
-                <li><a href="#" class="button special">Участвовать</a></li>
+                <li><a href="#participate-form" class="button special popup-with-form">Участвовать</a></li>
             </ul>
         </div>
         <a href="#one" class="more scrolly">Узнать больше</a>
@@ -114,7 +117,7 @@
                 <p>г. Ульяновск</p>
             </header>
             <ul class="actions vertical">
-                <li><a href="#" class="button fit special">Участвовать</a></li>
+                <li><a href="#participate-form" class="button fit special popup-with-form">Участвовать</a></li>
                 <li><a href="http://2014.front-end.su/" target="_blank" class="button fit">2014</a></li>
             </ul>
         </div>
@@ -123,21 +126,42 @@
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
-            <li><a href="https://vk.com/frontendsu_event" class="icon fa-vk"><span class="label">vk</span></a></li>
-            <li><a href="https://twitter.com/frontendsu" class="icon fa-twitter"><span class="label">twitter</span></a></li>
+            <li><a href="https://vk.com/frontendsu_event" class="icon fa-vk" target="_blank"><span class="label">vk</span></a></li>
+            <li><a href="https://twitter.com/frontendsu" class="icon fa-twitter" target="_blank"><span class="label">twitter</span></a></li>
         </ul>
         <ul class="copyright">
-            <li>&copy; Untitled</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; fronthub. 2015</li>
         </ul>
     </footer>
 
 </div>
 
+<form action="#participate-form" id="participate-form" class="white-popup-block mfp-hide">
+    <h1>Подать заявку на участие</h1>
+    <fieldset>
+        <ol>
+            <li>
+                <label for="name">Мы бы хотели знать ваше</label>
+                <input id="name" name="name" type="text" placeholder="Имя" required="">
+            </li>
+            <li>
+                <label for="email">Мы свяжемся с вами по указанной ниже электронной почте</label>
+                <input id="email" name="email" type="email" placeholder="Email" required="">
+            </li>
+            <li>
+                <label for="textarea">Сообщение</label><br>
+                <textarea id="textarea" name="text" placeholder="Опишите тему доклада"></textarea>
+            </li>
+            <button type="submit">отправить</button>
+        </ol>
+    </fieldset>
+</form>
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <!--[if lte IE 8]>
