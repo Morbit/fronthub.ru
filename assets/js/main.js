@@ -103,22 +103,6 @@
 
         }
 
-        // popup (participate form)
-        $('.popup-with-form').magnificPopup({
-            type: 'inline',
-            preloader: false,
-            focus: '#name'
-        });
-
-        // email
-        $('#participate-form').submit(function (e) {
-            e.preventDefault();
-            $.post( "../../email.php", { array: $('#participate-form').serializeArray()})
-                .done(function( data ) {
-                    console.log('success: ' + data);
-                });
-        });
-
     });
 
 })(jQuery);
