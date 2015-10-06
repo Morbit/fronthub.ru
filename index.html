@@ -14,6 +14,21 @@
         <script src="assets/js/ie/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <style>
+      .features li {
+        padding: 2em;
+        text-align: center;
+        width: 25%;
+      }
+      .features li a {
+        border: none;
+      }
+      @media screen and (max-width: 736px) {
+        .features li {
+          width: 100%;
+        }
+      }
+    </style>
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="assets/css/ie8.css"/>
     <![endif]-->
@@ -80,33 +95,42 @@
     <!-- Two -->
     <section id="two" class="wrapper alt style2">
         <section class="spotlight">
+            <div class="image"><img src="images/ezhkov.jpg" alt="" /></div><div class="content">
+                <h2>Custom vs. Native</h2>
+                <p>Противостояние элементов форм</p>
+                <blockquote>Денис Ежков, ITECH.group</blockquote>
+            </div>
+        </section>
+        <section class="spotlight">
+            <div class="image"><img src="images/vislov.jpg" alt="" /></div><div class="content">
+                <h2>Чо там у шрифтов?</h2>
+                <p>Современности веб-шрифтов рассказ</p>
+                <blockquote>Дима Вислов, Hexlet</blockquote>
+            </div>
+        </section>
+        <section class="spotlight">
+            <div class="image"><img src="images/vaganov.jpg" alt="" /></div><div class="content">
+                <h2>Жизнь после JS-фреймворков</h2>
+                <p>А может ну их? (на самом деле нет)</p>
+                <blockquote>Андрей Ваганов, AdvantShop.net</blockquote>
+            </div>
+        </section>
+        <section class="spotlight">
+            <div class="image"><img src="images/shoot.jpg" alt="" /></div><div class="content">
+                <h2>Мы вставили сайт в ваш Email</h2>
+                <p>Идеальный Email</p>
+                <p>Как вылечить боль при верстке писем?</p>
+                <p>Что почтовики нам готовят?</p>
+                <blockquote>Миша aka Shoot, Tittygram / X-cart</blockquote>
+            </div>
+        </section>
+        <section class="spotlight">
             <div class="image"><img src="http://lorempixel.com/600/400/cats/"></div>
               <div class="content">
                 <h2>Есть о чём рассказать?</h2>
                 <p>Присылайте свою заявку на <a href="mailto:frontendsu@gmail.com">frontendsu@gmail.com</a></p>
               </div>
         </section>
-        <section class="spotlight">
-            <div class="image"><img src="/images/ezhkov.jpg" alt="" /></div><div class="content">
-                <h2>Custom vs. Native</h2>
-                <p>Противостояние элементов форм.</p>
-                <blockquote>Денис Ежков, ITECH.group</blockquote>
-            </div>
-        </section>
-        <!-- <section class="spotlight">
-            <div class="image"><img src="http://2014.front-end.su/images/nikbelikov.jpg" alt="" /></div><div class="content">
-                <h2>НИКОЛАЙ БЕЛИКОВ</h2>
-                <p>«ЛЕНИВАЯ ВЕРСТКА»</p>
-                <p>Как ускорять верстку с помощью магии </p>
-            </div>
-        </section>
-        <section class="spotlight">
-            <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-                <h2>Augue eleifend aliquet<br />
-                sed condimentum</h2>
-                <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-        </section> -->
     </section>
 
     <section id="three" class="wrapper style3 special">
@@ -121,32 +145,16 @@
                     Пишите нам на <a href="mailto:frontendsu@gmail.com">frontendsu@gmail.com</a>
                 </p>
             </header>
-            <!-- <ul class="features">
-                <li class="icon fa-paper-plane-o">
-                    <h3>Arcu accumsan</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+
+            <h2>Уже с нами:</h2>
+
+            <ul class="features">
+                <li class="icon">
+                  <a href="http://hubcafe.ru" target="_blank">
+                    <img src="images/hubcafe.jpg" height="150">
+                  </a>
                 </li>
-                <li class="icon fa-laptop">
-                    <h3>Ac Augue Eget</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                </li>
-                <li class="icon fa-code">
-                    <h3>Mus Scelerisque</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                </li>
-                <li class="icon fa-headphones">
-                    <h3>Mauris Imperdiet</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                </li>
-                <li class="icon fa-heart-o">
-                    <h3>Aenean Primis</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                </li>
-                <li class="icon fa-flag-o">
-                    <h3>Tortor Ut</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-                </li>
-            </ul> -->
+            </ul>
         </div>
     </section>
     <!-- CTA -->
