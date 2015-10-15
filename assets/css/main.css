@@ -2485,14 +2485,25 @@
 /* Rest */
 	.rest {
 		text-align: center;
-		padding: 100px;
+		padding: 100px 0;
 		border-top: 3px solid white;
 		border-bottom: 3px solid white;
 		font-size: 48px;
 		font-weight: bold;
 		text-transform: uppercase;
 	}
-
+	@media screen and (max-width: 980px) {
+		.rest {
+			font-size: 30px;
+			padding: 70px 0;
+		}
+	}
+	@media screen and (max-width: 736px) {
+		.rest {
+			font-size: 20px;
+			padding: 50px 0;
+		}
+	}
 /* Spotlight */
 
 	.spotlight {
