@@ -2842,6 +2842,10 @@
 				border-color: rgba(0, 0, 0, 0.125);
 			}
 
+			.wrapper.style3 header.major h2 {
+				text-transform: uppercase;
+			}
+
 			.wrapper.style3 header.major p {
 				color: #d3d4e4;
 			}
