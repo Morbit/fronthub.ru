@@ -1,0 +1,33 @@
+{
+  "name": "shower-bright",
+  "version": "1.0.11",
+  "license": "MIT",
+  "main": "styles/screen.css",
+  "ignore": [
+    "*",
+    "!fonts/**",
+    "!images/**",
+    "!pictures/**",
+    "!styles/screen.css",
+    "!index.html",
+    "!License.md",
+    "!Readme.md",
+    "!bower.json"
+  ],
+  "keywords": [
+    "shower",
+    "presentation",
+    "bright",
+    "theme"
+  ],
+  "homepage": "https://github.com/shower/bright",
+  "_release": "1.0.11",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.11",
+    "commit": "668317f3c9e9dbeb3545cca1d2300d2031cd9aac"
+  },
+  "_source": "git://github.com/shower/bright.git",
+  "_target": "~1.0.11",
+  "_originalSource": "shower-bright"
+}
