@@ -2482,6 +2482,28 @@
 
 			}
 
+/* Rest */
+	.rest {
+		text-align: center;
+		padding: 100px 0;
+		border-top: 3px solid white;
+		border-bottom: 3px solid white;
+		font-size: 48px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	@media screen and (max-width: 980px) {
+		.rest {
+			font-size: 30px;
+			padding: 70px 0;
+		}
+	}
+	@media screen and (max-width: 736px) {
+		.rest {
+			font-size: 20px;
+			padding: 50px 0;
+		}
+	}
 /* Spotlight */
 
 	.spotlight {
@@ -2829,6 +2851,10 @@
 
 			.wrapper.style3 header.major h2, .wrapper.style3 header.major h3, .wrapper.style3 header.major h4, .wrapper.style3 header.major h5, .wrapper.style3 header.major h6 {
 				border-color: rgba(0, 0, 0, 0.125);
+			}
+
+			.wrapper.style3 header.major h2 {
+				text-transform: uppercase;
 			}
 
 			.wrapper.style3 header.major p {
