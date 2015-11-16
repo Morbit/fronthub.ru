@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<img src="pictures/posthtml.svg" height="465" width="465" alt="">
+		<p>Олег Наянов</p>
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:60px 0 0;
+				color:#212222;
+				text-align:center;
+				font-size:120px;
+				}
+			#Cover p {
+				color: #212222;
+				    font-size: 30px;
+				    font-weight: 200;
+				    position: absolute;
+				    bottom: 0;
+				    left: 42%;
+				    margin: 0;
+				}
+				#Cover > div{
+					padding-top: 0;
+				}
+				#Cover p a {
+					color:#212222;
+					}
+				#Cover img {
+					left: 50%;
+					margin-left: -232px;
+					top: 50%;
+					margin-top: -232px;
+				}
+				.slide.cover {
+				    background: #fff;
+				}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<img src="pictures/html5.png" height="465" width="465">
+	</div></section>
+	<section class="slide"><div>
+		<img src="pictures/html6.png" height="465" width="465">
+	</div></section>
+	<section class="slide"><div>
+		<img src="pictures/nohtml6.png" height="465" width="465">
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>HTML.Next</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Главная особенность HTML.Next?</h2>
+		<h2 class="next">Кастомные теги</h2>
+		<pre class="next">
+			<code>&lt;profile&gt;</code>
+			<code>	&lt;profile-photo&gt;</code>
+			<code>		&lt;img src="/ava.jpg"&gt;</code>
+			<code>	&lt;/profile-photo&gt;</code>
+			<code>	&lt;profile-contacts&gt;</code>
+			<code>		&lt;profile-phone&gt;+7 917 638 96 35&lt;/profile-phone&gt;</code>
+			<code>		&lt;profile-mail&gt;oleg.nayanov@gmail.com&lt;/profile-mail&gt;</code>
+			<code>	&lt;/profile-contacts&gt;</code>
+			<code>&lt;/profile&gt;</code>
+		</pre>
+	</div></section>
+	<style type="text/css">
+	.slide pre code {
+	    font-size: 0.7em;
+	}
+	</style>
+	<section class="slide"><div>
+		<h2>Кастомные теги v2</h2>
+		<pre>
+			<code>&lt;html:html&gt;</code>
+			<code>	&lt;html:head&gt;</code>
+			<code>		&lt;html:title&gt;A Look Into HTML6&lt;/html:title&gt;</code>
+			<code>		&lt;html:meta type=&quot;title&quot; value=&quot;Page Title&quot;&gt;</code>
+			<code>		&lt;html:meta type=&quot;description&quot; value=&quot;HTML example with namespaces&quot;&gt;</code>
+			<code>		&lt;html:link src=&quot;css/mainfile.css&quot; title=&quot;Styles&quot; type=&quot;text/css&quot;&gt;</code>
+			<code>		&lt;html:link src=&quot;js/mainfile.js&quot; title=&quot;Script&quot; type=&quot;text/javascript&quot;&gt;</code>
+			<code>	&lt;/html:head&gt;</code>
+			<code>&lt;/html:html&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Решаемые проблемы</h2>
+		<ul>
+			<li class="next">Независимость блоков</li>
+			<li class="next">Легкое чтение</li>
+			<li class="next">Удобная поддержка</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<img src="pictures/posthtml.svg" height="465" width="465" style="margin-top: -60px;">
+	</div></section>
+	<section class="slide"><div>
+		<img src="pictures/protein.png" width="800" style="margin-top: 90px;">
+	</div></section>
+	<section class="slide"><div>
+		<h2>PostHTML</h2>
+		<figure>
+			<blockquote>
+				<p>PostHTML это инструмент для преобразования HTML/XML</p>
+			</blockquote>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>posthtml-custom-elements</h2>
+		<pre>
+			<code>&lt;profile&gt;</code>
+			<code>	&lt;profile-photo&gt;</code>
+			<code>		&lt;img src="/ava.jpg"&gt;</code>
+			<code>	&lt;/profile-photo&gt;</code>
+			<code>	&lt;profile-contacts&gt;</code>
+			<code>		&lt;profile-phone&gt;+7 917 638 96 35&lt;/profile-phone&gt;</code>
+			<code>		&lt;profile-mail&gt;oleg.nayanov@gmail.com&lt;/profile-mail&gt;</code>
+			<code>	&lt;/profile-contacts&gt;</code>
+			<code>&lt;/profile&gt;</code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>posthtml-custom-elements</h2>
+		<pre>
+			<code>&lt;div class=&quot;profile&quot;&gt;</code>
+			<code>	&lt;div class=&quot;profile-photo&quot;&gt;</code>
+			<code>		&lt;img src=&quot;/ava.jpg&quot;&gt;</code>
+			<code>	&lt;/div&gt;</code>
+			<code>	&lt;div class=&quot;profile-contacts&quot;&gt;</code>
+			<code>		&lt;div class=&quot;profile-phone&quot;&gt;+7 917 638 96 35&lt;/div&gt;</code>
+			<code>		&lt;div class=&quot;profile-mail&quot;&gt;oleg.nayanov@gmail.com&lt;/div&gt;</code>
+			<code>	&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>posthtml-bem</h2>
+		<pre>
+			<code>&lt;div block=&quot;MadTeaParty&quot;&gt;</code>
+			<code>	&lt;div elem=&quot;march-hare&quot; mods=&quot;type:mad&quot;&gt;March Hare&lt;/div&gt;</code>
+			<code>	&lt;div elem=&quot;march-hare&quot; mods=&quot;mad&quot;&gt;March Hare&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>posthtml-bem</h2>
+		<pre>
+			<code>&lt;div class=&quot;MadTeaParty&quot;&gt;</code>
+			<code>	&lt;div class=&quot;MadTeaParty__march-hare MadTeaParty__march-hare_type_mad&quot;&gt;</code>
+			<code>		March Hare</code>
+			<code>	&lt;/div&gt;</code>
+			<code>	&lt;div class=&quot;MadTeaParty__march-hare MadTeaParty__march-hare_mad&quot;&gt;</code>
+			<code>		March Hare</code>
+			<code>	&lt;/div&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>posthtml-include</h2>
+		<pre>
+			<code>&lt;html&gt;</code>
+			<code>	&lt;head&gt;</code>
+			<code>		&lt;title&gt;index.html&lt;/title&gt;</code>
+			<code>	&lt;/head&gt;</code>
+			<code>	&lt;body&gt;</code>
+			<code>		&lt;include src=&quot;component/button/button.html&quot;&gt;</code>
+			<code>	&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Свой плагин. Удаление элемента с тегом</h2>
+		<pre>
+			<code>module.exports = function(options) {</code>
+			<code>		return function(tree) {</code>
+			<code>		tree.match({ attrs: { &#39;class&#39;: /awsome-class/g } }, function (node) {</code>
+			<code>		return &#39;&#39;;</code>
+			<code>	});</code>
+			<code>	return tree;</code>
+			<code>	};</code>
+			<code>};</code>
+		</pre>
+		<pre class="next">
+			<code>tree.match({ attrs: { class: /awsome-class/g } }, node =&gt; &#39;&#39; ); </code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Свой плагин. Работа с объектом</h2>
+		<pre>
+			<code>tree.match({ attrs: { class: &#39;awsome-class&#39; } }, node =&gt; {</code>
+			<code>	node.tag = &#39;span&#39;; // поменяли тег</code>
+			<code>	node.attrs.class = [].concat(node.attrs.class, &#39;fallout4-is-cool&#39;). join(&#39; &#39;);</code>
+			<code>	// добавили новый класс</code>
+			<code>	node.attrs.style = &#39;color: red;&#39; // записали новый стиль</code>
+			<code>	return node // вернули измененную ноду</code>
+			<code>} );</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>В планах</h2>
+		<ul>
+			<li>Научить работать в браузере</li>
+			<li>Научить работать с потоками для работы огромными файлами</li>
+		</ul>
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Спасибо за внимание</h2>
+	</div></section>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
