@@ -2541,6 +2541,10 @@
 			width: 60%;
 		}
 
+		.spotlight .person-icons a {
+			margin-right: 20px;
+		}
+
 		.spotlight:nth-child(2n) {
 			-moz-flex-direction: row-reverse;
 			-webkit-flex-direction: row-reverse;
