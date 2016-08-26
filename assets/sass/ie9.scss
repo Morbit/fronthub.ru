@@ -4,131 +4,103 @@
 @import 'libs/skel';
 
 /*
-	Spectral by HTML5 UP
-	html5up.net | @n33co
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Spotlight */
+/* Basic */
 
-	.spotlight {
-		display: block;
+	body {
+		background-color:		_palette(bg);
+		background-image:		url('../../images/bg.jpg');
+		background-size:		cover;
+		background-attachment:	fixed;
+		background-position:	center;
 
-		.image {
-			display: inline-block;
-			vertical-align: top;
-		}
-
-		.content {
-			@include padding(4em, 4em);
-			display: inline-block;
-		}
-
-		&:after {
-			clear: both;
+		&:before {
+			background: transparentize(_palette(bg), 0.2);
 			content: '';
 			display: block;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
 		}
 	}
 
 /* Features */
 
 	.features {
-		display: block;
-
-		li {
-			float: left;
-		}
-
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
+		article {
+			display: inline-block;
+			width: 45%;
 		}
 	}
 
-/* Banner + Wrapper (style4) */
+/* Menu */
 
-	#banner,
-	.wrapper.style4 {
-		background-image: url("../../images/banner.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: relative;
-
-		&:before {
-			background: #000000;
-			content: '';
-			height: 100%;
-			left: 0;
-			opacity: 0.5;
-			position: absolute;
-			top: 0;
-			width: 100%;
-		}
-
+	#menu {
 		.inner {
-			position: relative;
-			z-index: 1;
+			margin: 4em auto;
+		}
+	}
+
+/* Wrapper */
+
+	#wrapper {
+		> header {
+			background: none !important;
+		}
+	}
+
+	.wrapper {
+		&.spotlight {
+			.inner {
+				text-align: left !important;
+			}
+
+			.image {
+				display: inline-block;
+				margin: 0 _size(section-spacing, large) _size(element-margin) 0 !important;
+				vertical-align: middle;
+				width: 24%;
+			}
+
+			.content {
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+			}
 		}
 	}
 
 /* Banner */
 
 	#banner {
-		@include padding(14em, 0);
-		height: auto;
-
-		&:after {
-			display: none;
-		}
+		background: none !important;
 	}
 
-/* CTA */
+/* Footer */
 
-	#cta {
+	#footer {
+		background: none !important;
+
 		.inner {
-			header {
-				float: left;
+			form {
+				display: inline-block;
+				width: 45%;
 			}
 
-			.actions {
-				float: left;
-			}
-
-			&:after {
-				clear: both;
-				content: '';
-				display: block;
-			}
-		}
-	}
-
-/* Main */
-
-	#main {
-		> header {
-			background-image: url("../../images/banner.jpg");
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			position: relative;
-
-			&:before {
-				background: #000000;
-				content: '';
-				height: 100%;
-				left: 0;
-				opacity: 0.5;
-				position: absolute;
-				top: 0;
-				width: 100%;
-			}
-
-			> * {
-				position: relative;
-				z-index: 1;
+			.contact {
+				display: inline-block;
+				width: 45%;
 			}
 		}
 	}

@@ -4,35 +4,35 @@
 @import 'libs/skel';
 
 /*
-	Spectral by HTML5 UP
-	html5up.net | @n33co
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Icon */
+/* Basic */
 
-	.icon {
+	body {
+		-ms-behavior: url('assets/js/backgroundsize.min.htc');
+	}
+
+/* Type */
+
+	h1, h2, h3, h4, h5, h6 {
 		&.major {
-			border: none;
-
-			&:before {
-				font-size: 3em;
-			}
+			border-bottom: solid 2px _palette(fg-bold);
 		}
 	}
 
-/* Form */
-
-	label {
-		color: _palette(accent7, fg-bold);
+	blockquote {
+		border-left: solid 4px _palette(fg-bold);
 	}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select,
-	textarea {
-		border: solid 1px _palette(accent7, border);
+	code {
+		border: solid 2px _palette(fg-bold);
+	}
+
+	hr {
+		border-bottom: solid 2px _palette(fg-bold);
 	}
 
 /* Button */
@@ -42,74 +42,149 @@
 	input[type="button"],
 	button,
 	.button {
-		border: solid 2px _palette(accent7, border);
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+		border: solid 2px _palette(fg-bold);
 
 		&.special {
-			border: 0 !important;
+			border: 0;
 		}
 	}
 
-/* Page Wrapper + Menu */
+/* Form */
 
-	#menu {
-		display: none;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		position: relative;
+		-ms-behavior: url('assets/js/ie/PIE.htc');
+		background: transparent;
+		border: solid 2px _palette(fg-bold);
 	}
 
-	body.is-menu-visible {
-		#menu {
-			display: block;
+/* Table */
+
+	table {
+		tbody {
+			tr {
+				border: solid 1px _palette(fg-bold);
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+
+		&.alt {
+			tbody {
+				tr {
+					td {
+						border: solid 1px _palette(fg-bold);
+						border-left-width: 0;
+						border-top-width: 0;
+
+						&:first-child {
+							border-left-width: 1px;
+						}
+					}
+
+					&:first-child {
+						td {
+							border-top-width: 1px;
+						}
+					}
+				}
+			}
+
+			thead {
+				border-bottom: 0;
+			}
+
+			tfoot {
+				border-top: 0;
+			}
+		}
+	}
+
+/* Features */
+
+	.features {
+		article {
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+			position: relative;
+			width: 44%;
+
+			.image {
+				margin-top: 0;
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		background: _palette(bg);
+
+		h2 {
+			border-bottom: solid 2px _palette(fg-bold);
 		}
 	}
 
 /* Header */
 
 	#header {
-		nav {
-			> ul {
-				> li {
-					> a {
-						&.menuToggle {
-							&:after {
-								display: none;
-							}
-						}
-					}
-				}
-			}
-		}
+		background-color: desaturate(lighten(_palette(bg), 3), 1.5);
 	}
 
-/* Banner + Wrapper (style4) */
+/* Wrapper */
 
-	#banner,
-	.wrapper.style4 {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-
-		&:before {
+	.wrapper {
+		&:before, &:after {
 			display: none;
+		}
+
+		margin: 0;
+
+		&.spotlight {
+			.image {
+				-ms-behavior: url('assets/js/ie/PIE.htc');
+
+				img {
+					position: relative;
+					-ms-behavior: url('assets/js/ie/PIE.htc');
+				}
+			}
 		}
 	}
 
 /* Banner */
 
 	#banner {
-		.more {
-			height: 4em;
-
-			&:after {
-				display: none;
+		.logo {
+			.icon {
+				border: solid 2px _palette(fg-bold);
+				-ms-behavior: url('assets/js/ie/PIE.htc');
 			}
+		}
+
+		h2 {
+			border-bottom: solid 2px _palette(fg-bold);
 		}
 	}
 
-/* Main */
+/* Footer */
 
-	#main {
-		> header {
-			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+	#footer {
+		.inner {
+			.copyright {
+				border-top: solid 2px _palette(fg-bold);
 
-			&:before {
-				display: none;
+				li {
+					border-left: solid 2px _palette(fg-bold);
+				}
 			}
 		}
 	}
