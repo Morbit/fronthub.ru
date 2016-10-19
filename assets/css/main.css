@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200');
 
 /*
 	Solid State by HTML5 UP
@@ -1645,7 +1645,7 @@
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Exo 2', sans-serif;
 		font-size: 16.5pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -1710,7 +1710,7 @@
 			text-decoration: none;
 			border-bottom: 0;
 			display: block;
-			font-family: Raleway, Helvetica, sans-serif;
+			font-family: 'Exo 2', sans-serif;
 			font-size: 0.8em;
 			font-weight: 700;
 			letter-spacing: 0.1em;
@@ -1769,7 +1769,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-family: Raleway, Helvetica, sans-serif;
+		font-family: 'Exo 2', sans-serif;
 		font-weight: 700;
 		letter-spacing: 0.1em;
 		margin: 0 0 1em 0;
@@ -1918,7 +1918,7 @@
 	label {
 		color: #ffffff;
 		display: block;
-		font-family: Raleway, Helvetica, sans-serif;
+		font-family: 'Exo 2', sans-serif;
 		font-size: 0.8em;
 		font-weight: 700;
 		letter-spacing: 0.1em;
@@ -2375,7 +2375,7 @@
 
 			ul.contact li {
 				text-decoration: none;
-				margin: 2.5em 0 0 0;
+				margin: 1em 0 0 0;
 				padding: 0 0 0 3.25em;
 				position: relative;
 			}
@@ -2519,7 +2519,7 @@
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-family: Raleway, Helvetica, sans-serif;
+		font-family: 'Exo 2', sans-serif;
 		font-size: 0.8em;
 		font-weight: 700;
 		height: 3.75em;
@@ -2755,7 +2755,7 @@
 			}
 
 		#header nav {
-			font-family: Raleway, Helvetica, sans-serif;
+			font-family: 'Exo 2', sans-serif;
 			font-size: 0.8em;
 			font-weight: 700;
 			height: 3em;
@@ -2976,7 +2976,7 @@
 					border-radius: 5px;
 					border: 0;
 					display: block;
-					font-family: Raleway, Helvetica, sans-serif;
+					font-family: 'Exo 2', sans-serif;
 					font-size: 0.8em;
 					font-weight: 200;
 					letter-spacing: 0.1em;
@@ -3063,6 +3063,16 @@
 				width: 2.25em;
 			}
 
+    #banner .logo img {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: box-shadow .3s cubic-bezier(0.250, 0.250, 0.000, 1.635);
+    }
+
+    #banner .logo img:hover {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
 		#banner h2 {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, -moz-filter 0.25s ease;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.25s ease;
@@ -3105,7 +3115,7 @@
 			-ms-filter: blur(0);
 			filter: blur(0);
 			opacity: 1;
-			font-family: Raleway, Helvetica, sans-serif;
+			font-family: 'Exo 2', sans-serif;
 			font-size: 1em;
 			font-weight: 200;
 			letter-spacing: 0.1em;
@@ -3215,7 +3225,7 @@
 		}
 
 		#wrapper > header p {
-			font-family: Raleway, Helvetica, sans-serif;
+			font-family: 'Exo 2', sans-serif;
 			font-size: 1em;
 			font-weight: 200;
 			letter-spacing: 0.1em;
