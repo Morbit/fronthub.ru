@@ -3618,6 +3618,17 @@
 			width: calc(50% - 1.5em);
 		}
 
+		#footer .inner .reg {
+			width: 100%;
+		}
+
+		#mce-success-response,
+		#mce-error-response {
+			background: rgb(255, 255, 255);
+			border-radius: 7px;
+			padding: 10px;
+		}
+
 		#footer .inner .copyright {
 			border-top: solid 2px rgba(255, 255, 255, 0.125);
 			list-style: none;
