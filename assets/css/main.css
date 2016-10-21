@@ -3618,9 +3618,14 @@
 			width: calc(50% - 1.5em);
 		}
 
-		#footer .inner .reg {
-			width: 100%;
+		#footer .list {
+			list-style: none;
+			padding: 0;
 		}
+
+			#footer .list li {
+				padding: 0;
+			}
 
 		#mce-success-response,
 		#mce-error-response {
