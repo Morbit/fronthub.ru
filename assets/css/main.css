@@ -3629,9 +3629,10 @@
 
 		#mce-success-response,
 		#mce-error-response {
-			background: rgb(255, 255, 255);
-			border-radius: 7px;
-			padding: 10px;
+			background: transparent;
+	    border-radius: 7px;
+	    padding: 10px 10px 10px 0;
+	    margin-bottom: 40px;
 		}
 
 		#footer .inner .copyright {
