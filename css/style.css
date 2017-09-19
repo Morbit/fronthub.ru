@@ -1834,6 +1834,10 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	 transition: 400ms;
 }
 
+.ts-speaker-image.ts-speaker-image--add:after {
+	display: none;
+}
+
 .ts-speaker-image .social-links{
 	 list-style: none;
 	 margin: 0;
@@ -1869,21 +1873,21 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	 text-align: center;
 }
 
-.ts-speaker-image .social-links li a i.fa-facebook{
-	 background: #496daf;
-}
+/*.ts-speaker-image .social-links li a i.fa-facebook{*/
+	 /*background: #496daf;*/
+/*}*/
 
-.ts-speaker-image .social-links li a i.fa-twitter{
-	 background: #64acf1;
-}
+/*.ts-speaker-image .social-links li a i.fa-twitter{*/
+	 /*background: #64acf1;*/
+/*}*/
 
-.ts-speaker-image .social-links li a i.fa-instagram{
-	 background: #d32a1e;
-}
+/*.ts-speaker-image .social-links li a i.fa-instagram{*/
+	 /*background: #d32a1e;*/
+/*}*/
 
-.ts-speaker-image .social-links li a i.fa-linkedin{
-	 background: #0077b5;
-}
+/*.ts-speaker-image .social-links li a i.fa-linkedin{*/
+	 /*background: #0077b5;*/
+/*}*/
 
 .ts-speaker-image .social-links li a i:hover{
 	background: #1b1b1b;
