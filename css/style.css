@@ -2390,6 +2390,7 @@ h4.panel-title a.collapsed:before {
 }
 
 .footer-pattern{
+  width: 100%;
 	position: absolute;
    bottom: 0;
    opacity: .6;
