@@ -146,7 +146,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="countdown">
+						<div class="countdown" id="demo">
 							<div class="counter-day">
 								<span class="days">00</span>
 								<div class="smalltext">дней</div>
@@ -991,10 +991,6 @@
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<!-- Bootstrap jQuery -->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<!-- Counter -->
-		<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
-		<!-- Countdown -->
-		<script type="text/javascript" src="js/jquery.jCounter.js"></script>
 		<!-- Waypoints -->
 		<script type="text/javascript" src="js/waypoints.min.js"></script>
 		<!-- Color box -->
@@ -1007,13 +1003,6 @@
 		<script type="text/javascript" src="js/gmap3.js"></script>
 
 		<script type="text/javascript">
-			/* Event counter */
-
-			$(".countdown").jCounter({
-				date: '11 November 2017 11:00:00',
-				serverDateSource: '',
-				fallback: function () { console.log("count finished!") }
-			});
 
 			/* Google Map */
 

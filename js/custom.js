@@ -67,10 +67,49 @@ jQuery(function($) {
 	/*  Counter
 	/* ----------------------------------------------------------- */
 
-		$('.counterUp').counterUp({
-		 delay: 10,
-		 time: 1000
-		});
+	  // Set the date we're counting down to
+	  var countDownDate = new Date("Nov 11, 2017 11:00:00").getTime();
+
+	  // Update the count down every 1 second
+	  var x = setInterval(function () {
+
+		  // Get todays date and time
+		  var now = new Date().getTime();
+
+		  // Find the distance between now an the count down date
+		  var distance = countDownDate - now;
+
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		  // Display the result in the element with id="demo"
+		  var template = `<div class="counter-day">
+								<span class="days">${days}</span>
+								<div class="smalltext">дней</div>
+							</div>
+							<div class="counter-hour">
+								<span class="hours">${hours}</span>
+								<div class="smalltext">часов</div>
+							</div>
+							<div class="counter-minute">
+								<span class="minutes">${minutes}</span>
+								<div class="smalltext">минут</div>
+							</div>
+							<div class="counter-second">
+								<span class="seconds">${seconds}</span>
+								<div class="smalltext">секунд</div>
+							</div>`
+		  document.getElementById("demo").innerHTML = template;
+
+		  // If the count down is finished, write some text 
+		  if (distance < 0) {
+			  clearInterval(x);
+			  document.getElementById("demo").innerHTML = "";
+		  }
+	  }, 1000);
 
 
 
@@ -145,7 +184,7 @@ jQuery(function($) {
 
 		/* Preloader */
 
-		$(window).on('load', function() {
+		$(document).ready(function () {
 			handlePreloader();
 		});
 
