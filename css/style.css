@@ -18,7 +18,7 @@
 8.    Facts
 9.		Schedule
 10.	Speakers
-11.	Sponsors
+11.	spss
 12.	Pricing
 13.   Content area
 14.   Latest blog
@@ -1976,28 +1976,28 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	font-size: 16px;
 }
 
-/* Sponsors
+/* spss
 ================================================== */
 
-.ts-sponsors .container{
+.ts-spss .container{
 	padding-left: 150px;
    padding-right: 150px;
 }
 
-.sponsor-title{
+.sps-title{
 	 border-bottom: 1px solid #dadada;
 	 padding-bottom: 20px;
 	 max-width: 750px;
 	 margin:0 auto;
 }
 
-.sponsor-logo{
+.sps-logo{
 	display: inline-block;
 	text-align: center;
 	margin: 60px 0;
 }
 
-.sponsor-logo img{
+.sps-logo img{
 	opacity: .6;
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
@@ -2006,7 +2006,7 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	filter: grayscale(100%);
 }
 
-.sponsor-logo:hover img{
+.sps-logo:hover img{
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
@@ -2015,11 +2015,11 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	filter: grayscale(0%);
 }
 
-.sponsor-logo.double-line{
+.sps-logo.double-line{
 	 margin-top: 0;
 }
 
-.sponsor-logo.highlight img{
+.sps-logo.highlight img{
 	opacity: 1;
 	-webkit-filter: grayscale(0%);
 	-moz-filter: grayscale(0%);
@@ -2028,25 +2028,25 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
 	filter: grayscale(0%);
 }
 
-/* Sponsor details */
+/* sps details */
 
-.sponsor-details{
+.sps-details{
 	background: #f5f5f5;
 	padding: 30px;
 	margin: 60px 0;
 }
 
-.sponsor-details .sponsor-logo{
+.sps-details .sps-logo{
 	margin: 0;
 }
 
-.sponsor-info .sponsor-name {
+.sps-info .sps-name {
 	font-size: 23px;
 	margin-top: 20px;
 	color: #ea531c;
 }
 
-.sponsor-web-link a i{
+.sps-web-link a i{
 	font-size: 14px;
    width: 36px;
    height: 36px;
@@ -2056,11 +2056,11 @@ ul.navbar-nav > li.header-ticket:hover > a:after{
    margin: 10px 3px 0 3px;
 }
 
-.sponsor-web-link a{
+.sps-web-link a{
 	color: #fff;
 }
 
-.sponsor-web-link a:hover i{
+.sps-web-link a:hover i{
 	background: #ea531c;
 }
 

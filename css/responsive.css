@@ -595,7 +595,7 @@
 
 	/* Sponsor */
 
-	.ts-sponsors .container{
+	.ts-sps .container{
 		padding-left: 45px;
     	padding-right: 45px;
 	}
@@ -608,11 +608,11 @@
 		font-size: 16px;
 	}
 
-	.sponsor-logo{
+	.sps-logo{
 		margin: 0 0 30px;
 	}
 
-	.sponsor-title{
+	.sps-title{
 		margin-bottom: 40px;
 	}
 
