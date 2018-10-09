@@ -221,11 +221,15 @@ button:focus,
     padding : 0;
     height  : auto;
     margin  : 5px 0 !important;
-    }
+    width: 30px;
+}
+.navbar-brand img {
+    width: 100%;
+}
 
 @media (max-width : 768px) {
     .navbar-brand {
-        width : 200px;
+        width : 38px;
         }
 
     .navbar-brand img {
