@@ -36,7 +36,7 @@ Author: uiCookies.com
 # Mid grey (sub header) #666666
 # -------------------------------------------------------------------*/
 
-body {
+.body {
     font-family : 'Roboto', sans-serif;
     font-size   : 17px;
     line-height : 1.7em;
@@ -757,3 +757,54 @@ button:focus,
     text-align : center;
     top        : 65%;
     }
+
+.cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-row iframe {
+    height: 70px!important;
+    margin-top: 51px;
+    margin-left: 10px;
+}
+
+.b-pro-widget__open-button  {
+    color: #fff;
+    padding: 10px 30px;
+    margin-bottom: 0;
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #0000;
+    color: #fd367e;
+    border-color: #fd367e;
+    border: 2px solid #fd367e!important;
+    font-size: 18px;
+    padding: 15px 30px;
+    
+    line-height: 1.3333333;
+}
+
+.b-pro-widget__open-button:hover {
+    background: transparent!important;
+    border: 2px solid #fff!important;
+}
+
+@media (max-width : 768px) {
+    .cta-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cta-row iframe {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .b-pro-widget__open-button {
+        width: 100%;
+    }
+}
