@@ -43,7 +43,6 @@ Author: uiCookies.com
     color       : #353e55;
     font-weight : 100;
     background  : #ffffff;
-    border      : 10px solid #fff;
     }
 
 /* --------------------------------------
@@ -123,6 +122,7 @@ p {
 p.lead {
     font-size   : 19px;
     line-height : 1.7em;
+
     }
 
 ul {
@@ -388,6 +388,7 @@ button:focus,
     font-size   : 24px;
     line-height : 1.5em;
     color       : rgba(255, 255, 255, .7);
+    font-weight: 300;
     }
 
 .jumbotron .content .event-date {
@@ -434,7 +435,7 @@ button:focus,
 
 .section-title p {
     font-size : 18px;
-    color     : #888888;
+    color     : #000;
     }
 
 /* ----------------------------------------------
@@ -447,7 +448,7 @@ button:focus,
 
 .about-event address {
     font-size   : 15px;
-    color       : #888888;
+    color       : #000;
     line-height : 1.8em;
     }
 
@@ -533,6 +534,7 @@ button:focus,
     padding       : 5px 25px 15px;
     border-bottom : 1px solid #eeeeee;
     display       : inline-block;
+    font-weight: 300;
     }
 
 .section-ajenda .session h2 {
@@ -624,7 +626,7 @@ button:focus,
     }
 
 /* --------------------------
- * Client Logo 
+ * Client Logo
  *---------------------------*/
 
 .client-logo a img {
@@ -771,26 +773,23 @@ button:focus,
 }
 
 .b-pro-widget__open-button  {
-    color: #fff;
-    padding: 10px 30px;
     margin-bottom: 0;
-    font-size: 16px;
     border-radius: 0;
     font-weight: 500;
     text-transform: uppercase;
     background-color: #0000;
     color: #fd367e;
-    border-color: #fd367e;
     border: 2px solid #fd367e!important;
     font-size: 18px;
     padding: 15px 30px;
-    
+    transition: background-color .3s, border-color .3s, color .3s;
     line-height: 1.3333333;
 }
 
 .b-pro-widget__open-button:hover {
     background: transparent!important;
     border: 2px solid #fff!important;
+    transition: background-color .3s, border-color .3s, color .3s;
 }
 
 @media (max-width : 768px) {
