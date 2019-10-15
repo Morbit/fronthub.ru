@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta property="og:title" content="Fronthub 2019" />
-    <meta property="og:url" content="http://fronthub.ru" />
-    <meta property="og:image" content="http://fronthub.ru/2018/img/logo.png" />
+    <meta property="og:title" content="Fronthub 2019"/>
+    <meta property="og:url" content="http://fronthub.ru"/>
+    <meta property="og:image" content="http://fronthub.ru/img/logo.png"/>
     <meta
-      property="og:description"
-      content="Конференция по front-end. Вход бесплатный."
+        property="og:description"
+        content="Конференция по front-end. Вход бесплатный."
     />
+    <meta charset="UTF-8"/>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"/>
     <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/apple-icon-114x114.png"
+        rel="apple-touch-icon"
+        sizes="114x114"
+        href="/apple-icon-114x114.png"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/apple-icon-120x120.png"
+        rel="apple-touch-icon"
+        sizes="120x120"
+        href="/apple-icon-120x120.png"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/apple-icon-144x144.png"
+        rel="apple-touch-icon"
+        sizes="144x144"
+        href="/apple-icon-144x144.png"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/apple-icon-152x152.png"
+        rel="apple-touch-icon"
+        sizes="152x152"
+        href="/apple-icon-152x152.png"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-icon-180x180.png"
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-icon-180x180.png"
     />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/android-icon-192x192.png"
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=as, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=as, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Fronthub 2019</title>
     <style>
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
       body {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 20px 30px;
+        font-size: 18px;
       }
+
       header {
         flex-basis: 100%;
         text-align: center;
@@ -73,23 +82,401 @@
       aside {
         flex-grow: 1;
       }
+
       main {
         flex-grow: 3;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+      }
+
+      .date {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .nav-list {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-list li + li {
+        margin-left: 40px;
+      }
+
+      .section-aside {
+        float: right;
+        margin-left: 20px;
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .social-links li + li {
+        margin-left: 20px;
+      }
+
+      .social-links svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        transition: fill .3s;
+      }
+
+      .social-links a:hover svg {
+        fill: #4eb980;
+      }
+
+      section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 30px;
+        border-top: 1px solid #4eb980;
+      }
+
+      .speakers-list, .sponsors-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .speakers-item {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+      }
+
+      .sponsors-item {
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 40px;
+      }
+
+
+      .speakers-item img {
+        width: 250px;
+      }
+
+      .sponsors {
+        text-align: center;
+      }
+
+      .company-name {
+        font-weight: normal;
+        font-size: .68em;
+        white-space: nowrap;
+        margin-left: 10px;
+      }
+
+      .map-container {
+        margin-top: 40px;
+        padding-bottom: calc(100% * 9 / 16);
+        position: relative;
+      }
+
+      .map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+      }
+
+      .archive-list {
+      }
+
+      @media (min-width: 1600px) {
+        .map-container {
+          padding-bottom: 0;
+          height: 500px;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #323232;
+          color: #d5d5d5;
+        }
+
+        a {
+          color: #9dedb2;
+        }
+
+        .social-links svg {
+          fill: #d5d5d5;
+        }
+
+        .social-links a:hover svg {
+          fill: #4eb980;
+        }
+
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Fronthub 2019</h1>
-      <h2>23 ноября</h2>
+      <p>Ежегодная frontend-конференция</p>
+      <h1>Fronthub</h1>
+      <p class="date">
+        <time datetime="2019-11-23">23 ноября 2019 г.</time>
+        , Ульяновск
+      </p>
     </header>
-    <aside>
-      <h2>Архив:</h2>
-      <ul>
-        <li><a href="/2018/">2018</a></li>
-        <li><a href="/2017/">2017</a></li>
-      </ul>
-    </aside>
-    <main></main>
+    <main>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#speakers">Что послушать?</a></li>
+          <li><a href="#register">Зарегистрироваться</a></li>
+        </ul>
+      </nav>
+
+      <section class="about">
+        <h2>О конференции</h2>
+        <aside class="section-aside">
+          <address>
+            <strong>Fronthub</strong><br>
+            Улица Гончарова 25<br>
+            Гостиница Hilton<br>
+            Ульяновск<br>
+            <a href="tel:+79876319367">+7 (987) 631-93-67</a>
+          </address>
+          <ul class="social-links list-inline">
+            <li><a href="https://vk.com/fronthub_ulsk">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.36 304.36">
+                <path
+                    d="M261.945 175.576c10.096 9.857 20.752 19.131 29.807 29.982 4 4.822 7.787 9.798 10.684 15.394 4.105 7.955.387 16.709-6.746 17.184l-44.34-.02c-11.436.949-20.559-3.655-28.23-11.474-6.139-6.253-11.824-12.908-17.727-19.372-2.42-2.642-4.953-5.128-7.979-7.093-6.053-3.929-11.307-2.726-14.766 3.587-3.523 6.421-4.322 13.531-4.668 20.687-.475 10.441-3.631 13.186-14.119 13.664-22.414 1.057-43.686-2.334-63.447-13.641-17.422-9.968-30.932-24.04-42.691-39.971-22.895-31.021-40.428-65.108-56.186-100.15C-2.01 76.458.584 72.22 9.295 72.07c14.465-.281 28.928-.261 43.41-.02 5.879.086 9.771 3.458 12.041 9.012 7.826 19.243 17.402 37.551 29.422 54.521 3.201 4.518 6.465 9.036 11.113 12.216 5.142 3.521 9.057 2.354 11.476-3.374 1.535-3.632 2.207-7.544 2.553-11.434 1.146-13.383 1.297-26.743-.713-40.079-1.234-8.323-5.922-13.711-14.227-15.286-4.238-.803-3.607-2.38-1.555-4.799 3.564-4.172 6.916-6.769 13.598-6.769h50.111c7.889 1.557 9.641 5.101 10.721 13.039l.043 55.663c-.086 3.073 1.535 12.192 7.07 14.226 4.43 1.448 7.35-2.096 10.008-4.905 11.998-12.734 20.561-27.783 28.211-43.366 3.395-6.852 6.314-13.968 9.143-21.078 2.096-5.276 5.385-7.872 11.328-7.757l48.229.043c1.43 0 2.877.021 4.262.258 8.127 1.385 10.354 4.881 7.844 12.817-3.955 12.451-11.65 22.827-19.174 33.251-8.043 11.129-16.645 21.877-24.621 33.072-7.328 10.223-6.746 15.376 2.357 24.255zm0 0"
+                    fill-rule="evenodd" clip-rule="evenodd"/>
+              </svg>
+            </a></li>
+            <li><a href="http://www.youtube.com/c/frontendsu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310">
+                <path d="M297.917 64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359 0-61.369 5.776-72.517 19.938C0 79.663 0 100.008 0 128.166v53.669c0 54.551 12.896 82.248 83.386 82.248h143.226c34.216 0 53.176-4.788 65.442-16.527C304.633 235.518 310 215.863 310 181.835v-53.669c0-29.695-.841-50.16-12.083-63.521zm-98.896 97.765l-65.038 33.991a9.997 9.997 0 01-14.632-8.863v-67.764a10 10 0 0114.609-8.874l65.038 33.772a10 10 0 01.023 17.738z"/>
+              </svg>
+            </a></li>
+            <li><a href="https://twitter.com/FrontHubConf">
+              <svg viewBox="0 -47 512.00203 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m191.011719 419.042969c-22.140625 0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0"/>
+              </svg>
+            </a></li>
+          </ul>
+        </aside>
+        <p>Конференция проводится каждый год осенью в Ульяновске. На событие приглашаются профессиональные разработчики со всех городов России, а также все желающие поделиться новыми знаниями, решениями, технологиями.</p>
+        <p>А еще у нас есть <a href="https://slack-fronthub.herokuapp.com/" target="_blank">сообщество в слаке</a>, куда может вступить каждый желающий</p>
+        <p>Пройди простую <a href="https://fronthub.timepad.ru/event/1091724/" target="_blank">регистрацию</a>, и мы будем знать, кто к нам придет на конфу</p>
+      </section>
+      <section class="speakers" id="speakers">
+        <h2>Спикеры</h2>
+        <ul class="speakers-list">
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/alena.png" class="img-responsive" alt="Алёна Батицкая">
+              <figcaption class="caption text-center">
+                <h3>Алёна Батицкая</h3>
+                <h4>Put your cards on a table</h4>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/ezhkov.jpg" class="img-responsive" alt="Денис Ежков">
+              <figcaption class="caption text-center">
+                <h3>Денис Ежков <small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
+                <h4>Svelte - уже можно или еще рано?</h4>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/ermakov.jpg" class="img-responsive" alt="Денис Ермаков">
+              <figcaption class="caption text-center">
+                <h3>Денис Ермаков<small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <section class="schedule">
+        <h2>Расписание</h2>
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 10:30">10:30</time>
+            <h3 class="schedule-name">Door open</h3>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 11:00">11:00</time>
+            <h3 class="schedule-name">Put your cards on a table</h3>
+            <h4 class="schedule-speaker">Алена Батицкая</h4>
+            <p class="schedule-description"></p>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 12:00">12:00</time>
+            <h3 class="schedule-name">Svelte - уже можно или еще рано?</h3>
+            <h4 class="schedule-speaker">Алена Батицкая</h4>
+            <p class="schedule-description"></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sponsors">
+        <h2>Спонсоры и организаторы</h2>
+        <ul class="sponsors-list">
+          <li class="sponsors-item">
+            <img src="img/rostelek.png" alt="Ростелеком" height="100px">
+          </li>
+          <li class="sponsors-item">
+            <img src="img/dbp.svg" alt="Dualboot Partners" height="100px">
+          </li>
+          <li class="sponsors-item">
+            <img src="img/logo.png" alt="Fronthub" height="100px">
+          </li>
+        </ul>
+
+      </section>
+
+      <section class="contacts">
+        <h2>Как нас найти?</h2>
+        <p>Конференция будет проходить в Ульяновске по адресу: улица Гончарова, 25 (гостиница Hilton)</p>
+        <div class="map-container">
+          <div class="map" id="googleMap"></div>
+        </div>
+      </section>
+      <section class="archive">
+        <h2>Архив:</h2>
+        <ul class="archive-list">
+          <li><a href="/2018/">2018</a></li>
+          <li><a href="/2017/">2017</a></li>
+        </ul>
+      </section>
+    </main>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4KqNiOrEz9iceWEAToO9GGmiD7QOV0E"></script>
+    <script>
+      const darkModeMQL = window.matchMedia("(prefers-color-scheme: dark)");
+      const latitude = 54.320443;
+      const longitude = 48.399081;
+      const map_zoom = 18;
+      const darkStyles = [
+        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+        {
+          featureType: 'administrative.locality',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'geometry',
+          stylers: [{color: '#263c3f'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#6b9a76'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [{color: '#38414e'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#212a37'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#9ca5b3'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry',
+          stylers: [{color: '#746855'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#1f2835'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#f3d19c'}]
+        },
+        {
+          featureType: 'transit',
+          elementType: 'geometry',
+          stylers: [{color: '#2f3948'}]
+        },
+        {
+          featureType: 'transit.station',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#515c6d'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.stroke',
+          stylers: [{color: '#17263c'}]
+        }
+      ];
+
+      const map_options = {
+        center: new google.maps.LatLng(latitude, longitude),
+        zoom: map_zoom,
+        panControl: false,
+        zoomControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: false,
+        styles: darkModeMQL.matches ? darkStyles : [],
+      };
+
+      const map = new google.maps.Map(
+        document.getElementById("googleMap"),
+        map_options
+      );
+
+      const marker = new google.maps.Marker({
+        position: new google.maps.LatLng(latitude, longitude),
+        animation: google.maps.Animation.BOUNCE,
+        map: map,
+        visible: true
+      });
+
+      darkModeMQL.addListener(() => {
+        map.setOptions({ styles: darkModeMQL.matches ? darkStyles : []});
+      });
+
+    </script>
   </body>
 </html>
