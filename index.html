@@ -336,10 +336,10 @@
         <h2>Спонсоры и организаторы</h2>
         <ul class="sponsors-list">
           <li class="sponsors-item">
-            <img src="img/rostelek.png" alt="Ростелеком" height="100px">
+            <img src="img/dbp.svg" alt="Dualboot Partners" height="100px">
           </li>
           <li class="sponsors-item">
-            <img src="img/dbp.svg" alt="Dualboot Partners" height="100px">
+            <img id="rtk" src="img/rostelek.svg" alt="Ростелеком" height="100px">
           </li>
           <li class="sponsors-item">
             <img src="img/logo.png" alt="Fronthub" height="100px">
@@ -474,8 +474,11 @@
         visible: true
       });
 
+      document.getElementById('rtk').setAttribute('src', darkModeMQL.matches ? 'img/rostelek_dark.svg' : 'img/rostelek.svg')
+
       darkModeMQL.addListener(() => {
         map.setOptions({ styles: darkModeMQL.matches ? darkStyles : []});
+        document.getElementById('rtk').setAttribute('src', darkModeMQL.matches ? 'img/rostelek_dark.svg' : 'img/rostelek.svg')
       });
 
     </script>
