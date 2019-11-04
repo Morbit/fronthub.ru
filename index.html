@@ -146,11 +146,19 @@
         border-top: 1px solid #4eb980;
       }
 
-      .speakers-list, .sponsors-list {
+      .sponsors-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+      }
+
+      .speakers-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
       }
 
       .speakers-item {
@@ -168,6 +176,10 @@
 
       .speakers-item img {
         width: 250px;
+      }
+
+      .speakers-item figure {
+        margin: 0;
       }
 
       .sponsors {
@@ -231,8 +243,7 @@
       <p>Ежегодная frontend-конференция</p>
       <h1>Fronthub</h1>
       <p class="date">
-        <time datetime="2019-11-23">Суббота, 23 ноября 2019 г.</time>
-        , Ульяновск
+        <time datetime="2019-11-23">Суббота, 23 ноября 2019 г.</time>, Ульяновск
       </p>
     </header>
     <main>
@@ -248,7 +259,7 @@
         <aside class="section-aside">
           <address>
             <strong>Fronthub</strong><br>
-            Улица Гончарова 25<br>
+            Улица Гончарова, 25<br>
             Гостиница Hilton<br>
             Ульяновск<br>
             <a href="tel:+79876319367">+7 (987) 631-93-67</a>
@@ -283,16 +294,16 @@
         <ul class="speakers-list">
           <li class="speakers-item">
             <figure class="thumbnail">
-              <img src="img/ezhkov.jpg" class="img-responsive" alt="Денис Ежков">
+              <img src="img/ezhkov.jpg" class="img-responsive" alt="Денис Ежков" loading="lazy">
               <figcaption class="caption text-center">
-                <h3>Денис Ежков<!-- <small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small>--></h3>
+                <h3>Денис Ежков <small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
                 <h4>Svelte - уже можно или еще рано?</h4>
               </figcaption>
             </figure>
           </li>
           <li class="speakers-item">
             <figure class="thumbnail">
-              <img src="img/alena.png" class="img-responsive" alt="Алёна Батицкая">
+              <img src="img/alena.png" class="img-responsive" alt="Алёна Батицкая" loading="lazy">
               <figcaption class="caption text-center">
                 <h3>Алёна Батицкая</h3>
                 <h4>Put your cards on a table</h4>
@@ -301,9 +312,28 @@
           </li>
           <li class="speakers-item">
             <figure class="thumbnail">
-              <img src="img/ermakov.jpg" class="img-responsive" alt="Денис Ермаков">
+              <img src="img/ermakov.jpg" class="img-responsive" alt="Денис Ермаков" loading="lazy">
               <figcaption class="caption text-center">
-                <h3>Денис Ермаков<!--<small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small>--></h3>
+                <h3>Денис Ермаков<small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
+                <h4>Срам, скрамно, и ещё 8 способов убить команду</h4>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/ivko.jpg" class="img-responsive" alt="Дмитрий Ивко" loading="lazy">
+              <figcaption class="caption text-center">
+                <h3>Дмитрий Ивко<small class="company-name">Altarix</small></h3>
+                <h4>Оптимизация или как не выстрелить себе в ногу</h4>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/fatyuk.jpg" class="img-responsive" alt="Андрей Фатюк" loading="lazy">
+              <figcaption class="caption text-center">
+                <h3>Андрей Фатюк<small class="company-name">TaxDome</small></h3>
+                <h4>Тестирование скриншотами</h4>
               </figcaption>
             </figure>
           </li>
@@ -339,10 +369,13 @@
             <img src="img/dbp.svg" alt="Dualboot Partners" height="100px">
           </li>
           <li class="sponsors-item">
-            <img id="rtk" src="img/rostelek.svg" alt="Ростелеком" height="100px">
+            <img class="js-icon-replace" id="rostelek" src="img/rostelek.svg" alt="Ростелеком" height="100px">
           </li>
           <li class="sponsors-item">
             <img src="img/logo.png" alt="Fronthub" height="100px">
+          </li>
+          <li class="sponsors-item">
+            <img class="js-icon-replace" id="taxdome" src="img/taxdome.svg" alt="TaxDome" height="100px">
           </li>
         </ul>
 
@@ -474,11 +507,17 @@
         visible: true
       });
 
-      document.getElementById('rtk').setAttribute('src', darkModeMQL.matches ? 'img/rostelek_dark.svg' : 'img/rostelek.svg')
+      const replaceIcons = (icon) => {
+        icon.setAttribute('src', darkModeMQL.matches ? `img/${icon.id}_dark.svg` : `img/${icon.id}.svg`);
+      };
+
+      const iconsToReplace = document.querySelectorAll('.js-icon-replace');
+
+      iconsToReplace.forEach(replaceIcons);
 
       darkModeMQL.addListener(() => {
         map.setOptions({ styles: darkModeMQL.matches ? darkStyles : []});
-        document.getElementById('rtk').setAttribute('src', darkModeMQL.matches ? 'img/rostelek_dark.svg' : 'img/rostelek.svg')
+        iconsToReplace.forEach(replaceIcons);
       });
 
     </script>
