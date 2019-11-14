@@ -211,6 +211,42 @@
       .archive-list {
       }
 
+      .schedule-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .schedule-item--break {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background: #DDF2E7;
+      }
+
+      .schedule-time {
+        display: block;
+        width: 100px;
+        flex-shrink: 0;
+      }
+
+      .schedule-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .schedule-speaker, .schedule-name {
+        margin: 0;
+      }
+
+      .schedule-name {
+        font-weight: normal;
+      }
+
+      .schedule-info {
+        margin-left: 24px;
+      }
+
+
       @media (min-width: 1600px) {
         .map-container {
           padding-bottom: 0;
@@ -234,6 +270,9 @@
 
         .social-links a:hover svg {
           fill: #4eb980;
+        }
+        .schedule-item--break {
+          color: #1b1b1b;
         }
 
       }
@@ -298,34 +337,6 @@
               <img src="img/ezhkov.jpg" class="img-responsive" alt="Денис Ежков" loading="lazy">
               <figcaption class="caption text-center">
                 <h3>Денис Ежков <small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
-                <h4>Svelte - уже можно или еще рано?</h4>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="speakers-item">
-            <figure class="thumbnail">
-              <img src="img/alena.png" class="img-responsive" alt="Алёна Батицкая" loading="lazy">
-              <figcaption class="caption text-center">
-                <h3>Алёна Батицкая</h3>
-                <h4>Put your cards on a table</h4>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="speakers-item">
-            <figure class="thumbnail">
-              <img src="img/ermakov.jpg" class="img-responsive" alt="Денис Ермаков" loading="lazy">
-              <figcaption class="caption text-center">
-                <h3>Денис Ермаков<small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
-                <h4>Срам, скрамно, и ещё 8 способов убить команду</h4>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="speakers-item">
-            <figure class="thumbnail">
-              <img src="img/ivko.jpg" class="img-responsive" alt="Дмитрий Ивко" loading="lazy">
-              <figcaption class="caption text-center">
-                <h3>Дмитрий Ивко<small class="company-name">Altarix</small></h3>
-                <h4>Оптимизация или как не выстрелить себе в ногу</h4>
               </figcaption>
             </figure>
           </li>
@@ -334,7 +345,30 @@
               <img src="img/fatyuk.jpg" class="img-responsive" alt="Андрей Фатюк" loading="lazy">
               <figcaption class="caption text-center">
                 <h3>Андрей Фатюк<small class="company-name">ТаксДом</small></h3>
-                <h4>Тестирование скриншотами</h4>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/ivko.jpg" class="img-responsive" alt="Дмитрий Ивко" loading="lazy">
+              <figcaption class="caption text-center">
+                <h3>Дмитрий Ивко<small class="company-name">Altarix</small></h3>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/alena.png" class="img-responsive" alt="Алёна Батицкая" loading="lazy">
+              <figcaption class="caption text-center">
+                <h3>Алёна Батицкая</h3>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="speakers-item">
+            <figure class="thumbnail">
+              <img src="img/ermakov.jpg" class="img-responsive" alt="Денис Ермаков" loading="lazy">
+              <figcaption class="caption text-center">
+                <h3>Денис Ермаков<small class="company-name"><abbr title="Ростелеком Информационные Технологии">РТК ИТ</abbr></small></h3>
               </figcaption>
             </figure>
           </li>
@@ -342,25 +376,89 @@
       </section>
       <section class="schedule">
         <h2>Расписание</h2>
-        <h4>Расписание уточняется</h4>
-<!--        <ul class="schedule-list">-->
-<!--          <li class="schedule-item">-->
-<!--            <time class="schedule-time" datetime="2019-11-23 10:30">10:30</time>-->
-<!--            <h3 class="schedule-name">Door open</h3>-->
-<!--          </li>-->
-<!--          <li class="schedule-item">-->
-<!--            <time class="schedule-time" datetime="2019-11-23 11:00">11:00</time>-->
-<!--            <h3 class="schedule-name">Put your cards on a table</h3>-->
-<!--            <h4 class="schedule-speaker">Алена Батицкая</h4>-->
-<!--            <p class="schedule-description"></p>-->
-<!--          </li>-->
-<!--          <li class="schedule-item">-->
-<!--            <time class="schedule-time" datetime="2019-11-23 12:00">12:00</time>-->
-<!--            <h3 class="schedule-name">Svelte - уже можно или еще рано?</h3>-->
-<!--            <h4 class="schedule-speaker">Денис Ежков</h4>-->
-<!--            <p class="schedule-description"></p>-->
-<!--          </li>-->
-<!--        </ul>-->
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 10:00">10:00</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Door open</h3>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 11:00">11:00</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Денис Ежков</h3>
+              <h4 class="schedule-name">Svelte - уже можно или еще рано?</h4>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 11:40">11:40</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Андрей Фатюк</h3>
+              <h4 class="schedule-name">Тестирование скриншотами</h4>
+            </div>
+          </li>
+          <li class="schedule-item schedule-item--break">
+            <span class="schedule-time"><time datetime="2019-11-23 12:20">12:20</time>–<time datetime="2019-11-23 12:40">12:40</time></span>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Coffee-break</h3>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 12:40">12:40</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Дмитрий Ивко</h3>
+              <h4 class="schedule-name">Оптимизация или как не выстрелить себе в ногу</h4>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 13:20">13:20</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Алёна Батицкая</h3>
+              <h4 class="schedule-name">Put your cards on a table</h4>
+            </div>
+          </li>
+          <li class="schedule-item schedule-item--break">
+            <span class="schedule-time"><time datetime="2019-11-23 14:00">14:00</time>–<time datetime="2019-11-23 15:00">15:00</time></span>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">ОБЕД</h3>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 15:00">15:00</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Андрей Воронин</h3>
+              <h4 class="schedule-name">VSCode plugin</h4>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 15:40">15:40</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Костя Молчанов</h3>
+              <h4 class="schedule-name">Exotic SPA: фронтенд на ЯП, о котором вы не слышали</h4>
+            </div>
+          </li>
+          <li class="schedule-item schedule-item--break">
+            <span class="schedule-time"><time datetime="2019-11-23 16:20">16:20</time>–<time datetime="2019-11-23 16:40">16:40</time></span>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Coffee-break</h3>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 16:40">16:40</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Евгений Дементьев</h3>
+              <h4 class="schedule-name">GraphQL больше не нужен: так ли это?</h4>
+            </div>
+          </li>
+          <li class="schedule-item">
+            <time class="schedule-time" datetime="2019-11-23 17:20">17:20</time>
+            <div class="schedule-info">
+              <h3 class="schedule-speaker">Денис Ермаков</h3>
+              <h4 class="schedule-name">Срам, скрамно, и ещё 8 способов убить команду</h4>
+            </div>
+          </li>
+        </ul>
+
       </section>
 
       <section class="sponsors">
